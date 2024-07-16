@@ -106,3 +106,6 @@ You'll have all binaries in the root directory of the project
 
 ## Command line examples
 
+    rgb2hdmi-config --list-ports
+    rgb2hdmi-config --list-ports-table
+    rgb2hdmi-config --config
