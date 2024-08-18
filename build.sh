@@ -11,6 +11,12 @@ ARC_ARM64=aarch64-apple-darwin
 ARC_WIN64=x86_64-pc-windows-gnu
 ARC_LINUX64=x86_64-unknown-linux-gnu 
 
+rustup target add x86_64-pc-windows-gnu 
+rustup target add aarch64-unknown-linux-gnu 
+rustup target add x86_64-unknown-linux-gnu
+# rustup update
+cargo install cross --git https://github.com/cross-rs/cross
+
 # Build release binary
 cargo clean
 cargo build --release --target=$ARC_ARM64 

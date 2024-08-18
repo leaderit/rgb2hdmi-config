@@ -83,7 +83,7 @@ impl Rgb2Hdmi {
         if cfg!(target_os = "macos") {
             ports = ports.iter().filter(|&p| p.to_string_lossy().starts_with("/dev/cu.usbmodem")).map(|p| p.clone()).collect();
         }
-        if cfg!(target_os = "unix") {
+        if cfg!(target_os = "linux") {
 
         }
 
