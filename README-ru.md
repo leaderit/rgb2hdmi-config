@@ -1,28 +1,30 @@
-# Console Configuration utility for Raspberry Pi rp2040 RGB-TO-VGA-HDMI module
-# (c) Valerii Grazhdankin, 2024
+# Инструмент командной строки для настройки модуля `Raspberry Pi rp2040 RGB-TO-VGA-HDMI`
+# (c) Валерий Гражданкин, 2024-2025
 
-## How to build under MacOs
-- Install a __rust__ compiler
-    https://www.rust-lang.org/tools/install
+## Как скомпилировать используя MacOs
 
-- Install and run a Docker desktop daemon
+Инструкция по сборке дана для системы Mac OS, так как это моя основная среда разработки.
+- Установите компилятор `rust`
+    https://www.rust-lang.org/ru/tools/install
+
+- Установите и запустите Docker
     https://www.docker.com/products/docker-desktop/
 
-- install targets
+- Установите пакеты для целевых платформ
     rustup target add \
         x86_64-apple-darwin \
         aarch64-apple-darwin \
         x86_64-pc-windows-gnu \
         x86_64-unknown-linux-gnu 
 
-- install cross for smoorth build of the linux target
+- установите cross чтобы упростить сборку для linux
     cargo install cross --git https://github.com/cross-rs/cross
 
 - ./build.sh
 
-You'll have all binaries in the root directory of the project
+Вы получите все исполняемые файлы в корневой папке проекта
 
-## Help screen
+## Экран помощи
 
     RGB2HDMI configuration utility
     (c) Valerii Grazhdankin <ias-projects@mail.ru>
@@ -55,7 +57,7 @@ You'll have all binaries in the root directory of the project
     -h, --help                                             Print help
     -V, --version                                          Print version
 
-## List of an avalable serial ports
+## Список доступных последовательных портов
 
     # rgb2hdmi-config --list-ports-table
     rgb2hdmi-config v0.9.9
@@ -79,7 +81,7 @@ You'll have all binaries in the root directory of the project
     | /dev/tty.Bluetooth-Incoming-Port |      --      |   --    |   --   |
     +----------------------------------+--------------+---------+--------+
 
-## Display a current configuration of the device
+## Показать конфигурацию подключенного модуля
 
     #rgb2hdmi-config --config
     rgb2hdmi-config v0.9.9
@@ -107,7 +109,7 @@ You'll have all binaries in the root directory of the project
     Delay Fall            : 31
     Lenght Vertycal Sync  : 500
 
-## Command line examples
+## Примеры командной строки
 
     rgb2hdmi-config --list-ports
     rgb2hdmi-config --list-ports-table

@@ -16,7 +16,7 @@ const APP_NAME: &str    = env!("CARGO_PKG_NAME");
 const APP_AUTHORS: &str  = env!("CARGO_PKG_AUTHORS");
 
 fn main() -> Result<()> {
-    println!("{} v{}\nRGB2HDMI configuration utility\n(c) {}", 
+    println!("{} v{}\nRGB2HDMI configuration utility\n(c) {}, 2024-2025", 
     APP_NAME, APP_VERSION, APP_AUTHORS);
 
     let args = Args::new();
