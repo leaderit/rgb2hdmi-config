@@ -18,7 +18,9 @@ pub enum Rgb2hdmiPin {
     #[strum(serialize = "vs", serialize = "v")]
     Vs, 
     #[strum(serialize = "freq", serialize = "f")]
-    Freq
+    Freq,
+    #[strum(serialize = "none", serialize = "n")]
+    None    
 }
 
 impl Into<u32> for Rgb2hdmiPin {
@@ -37,7 +39,7 @@ impl From<u32> for Rgb2hdmiPin {
             4 => Self::Hs,
             5 => Self::Vs,
             6 => Self::Freq,
-            _ => Self::Freq, 
+            _ => Self::None, 
         }        
 
     }
@@ -53,7 +55,10 @@ impl From<u32> for Rgb2hdmiPin {
 
 impl Rgb2hdmiPin {
     pub fn mask( &self ) -> u32 {
-        1 << self.clone() as u32
+        match self {
+            Rgb2hdmiPin::None => 0,
+            _ => 1 << self.clone() as u32
+        }
     }
 }
 

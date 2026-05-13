@@ -64,7 +64,7 @@ pub struct Args {
     pub screen: Option<Rgb2hdmiScreen>,    
 
     /// Invert pin
-    #[arg(long, value_delimiter = ',', value_name = "RED, GREEN, BLUE, INTENS, HS, VS, FREQ")]
+    #[arg(long, value_delimiter = ',', value_name = "RED, GREEN, BLUE, INTENS, HS, VS, FREQ, NONE")]
     pub invert: Option<Vec<Rgb2hdmiPin>>,
 
     /// Shif x

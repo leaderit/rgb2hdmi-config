@@ -1,13 +1,13 @@
 [package]
 name = "rgb2hdmi-config"
-version = "0.9.91"
+version = "0.9.92"
 edition = "2021"
 authors = ["Valerii Grazhdankin <ias-projects@mail.ru>"]
 
 [dependencies]
-clap = { version = "4.5.39", features = ["derive", "string", "env"] }
+clap = { version = "4.6.1", features = ["derive", "string", "env"] }
 cli-table = "0.5.0"
-serial2 = "0.2.29"
+serial2 = "0.2.37"
 serial_enumerator = "0.2.12"
-strum = { version = "0.27.1", features = ["derive"] }
-strum_macros = "0.27.1"
+strum = { version = "0.28.0", features = ["derive"] }
+strum_macros = "0.28.0"
